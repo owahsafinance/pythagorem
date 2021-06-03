@@ -1,0 +1,109 @@
+<!DOCType html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Web3modal example written in vanilla JavaScript and HTML</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Get some bootstrap default styles -->
+    <link rel="stylesheet" href="web3/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style data-styled="active" data-styled-version="5.1.1"></style></head>
+ <body>
+    <!-- Construct a Bootstrap layout -->
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Web3modal example for vanille JavaScript and HTML</h1>
+				<p>No wallet connected. Connect wallet to show accounts and their ETH balances.</p>
+				<div class="alert alert-danger" id="alert-error-https" style="display: none">
+					You can run this example only over HTTPS connection.
+				</div>
+				<div id="prepare">
+					<button class="btn btn-primary" id="btn-connect">
+					Connect wallet
+					</button>
+				</div>
+				<div id="connected" style="display: none">
+					<button class="btn btn-primary" id="btn-disconnect">
+					Disconnect wallet
+					</button>	
+					<hr>
+					<div id="network">
+						<p>
+							<strong>Connected blockchain:</strong> 
+							<span id="network-name"></span>
+						</p>
+						<p>
+							<strong>Selected account:</strong> 
+							<span id="selected-account"></span>
+						</p>
+					</div>
+					<hr>
+					<h3>All account balances</h3>
+					<table class="table table-listing">
+						<thead>
+							<tr>
+								<th>Address</th>
+								<th>ETH balance</th>
+							</tr>
+						</thead>
+						<tbody id="accounts">
+						</tbody>
+					</table>
+					<p>Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
+				</div>
+				<br>
+			</div>
+		</div>
+    </div>
+
+    <!-- We use simple <template> templating for the example -->
+    <div id="templates" style="display: none">
+		<template id="template-balance"></template>
+    </div>
+
+    <script type="text/javascript" src="web3/web3.min.js"></script>
+    <script type="text/javascript" src="web3/index.js"></script>
+    <script type="text/javascript" src="web3/index.min.js"></script>
+    <script type="text/javascript" src="web3/react.min.js"></script>
+    <script type="text/javascript" src="web3/fortmatic.js"></script>
+    <script type="text/javascript" src="web3/example.js"></script>
+  
+
+<div id="WEB3_CONNECT_MODAL_ID">
+	<div class="sc-AxgMl fdJEgN web3modal-modal-lightbox" offset="0" opacity="0.4">
+		<div class="sc-AxheI bRUsJg web3modal-modal-container">
+			<div class="sc-Axmtr hvJMgY web3modal-modal-hitbox"></div>
+			<div class="sc-AxmLO jPCoOc web3modal-modal-card">
+				<div class="sc-AxhUy kaSVED web3modal-provider-wrapper">
+					<div class="sc-AxhCb xPSun web3modal-provider-container">
+						<div class="sc-AxjAm bcMPWx web3modal-provider-icon">
+							<img src="files2/metamask.svg" alt="MetaMask">
+						</div>
+						<div class="sc-AxirZ hBmmHr web3modal-provider-name">MetaMask</div>
+						<div class="sc-AxiKw ceSpQQ web3modal-provider-description">Connect to your MetaMask Wallet</div>
+					</div>
+				</div>
+				<div class="sc-AxhUy kaSVED web3modal-provider-wrapper">
+					<div class="sc-AxhCb xPSun web3modal-provider-container">
+						<div class="sc-AxjAm bcMPWx web3modal-provider-icon">
+							<img src="files2/walletConnect.svg" alt="WalletConnect">
+						</div>
+						<div class="sc-AxirZ hBmmHr web3modal-provider-name">WalletConnect</div>
+						<div class="sc-AxiKw ceSpQQ web3modal-provider-description">Scan with WalletConnect to connect</div>
+					</div>
+				</div>
+				<div class="sc-AxhUy kaSVED web3modal-provider-wrapper">
+					<div class="sc-AxhCb xPSun web3modal-provider-container">
+						<div class="sc-AxjAm bcMPWx web3modal-provider-icon">
+							<img src="files2/trustwallet.svg" alt="Trust wallet">
+						</div>
+						<div class="sc-AxirZ hBmmHr web3modal-provider-name">Trust wallet</div>
+						<div class="sc-AxiKw ceSpQQ web3modal-provider-description">Connect with your Trust wallet</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
