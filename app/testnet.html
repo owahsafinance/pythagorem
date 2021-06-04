@@ -114,11 +114,13 @@
 <!-- custom section //-->
     <!-- We use simple <template> templating for the example -->
     <div id="templates" style="display: none">
-		<template id="template-balance"></template>
+      <template id="template-balance">
+        <tr>
+          <th class="address"></th>
+          <td class="balance"></td>
+        </tr>
+      </template>
     </div>
-			</section>
-		</section>
-	</div>
     <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
     <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
