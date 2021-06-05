@@ -7,9 +7,50 @@
 		<title>YAVAXLEND Protocol (XLEND)</title>
 		<link href="files/app.dffdc57e.css" rel="preload" as="style">
 		<link href="files/chunk-vendors.42a9d6b4.css" rel="preload" as="style">
-		<link href="files/app.79d504fa.js.download" rel="preload" as="script">
+		<link href="files/app.79d504fa.js" rel="preload" as="script">
 		<link href="files/chunk-vendors.42a9d6b4.css" rel="stylesheet">
 		<link href="files/app.dffdc57e.css" rel="stylesheet">
+<style>
+.anticon-menu {
+  background-color: #000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.anticon-menu:hover, .anticon-menu:focus {
+  background-color: green;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  margin-left: -112px;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
 </head>
 <body data-route="Home">
 	<noscript>
@@ -23,7 +64,7 @@
 					<img src="files/yavaxlendlogo.png" alt="YAVAXLEND" class="max-h-full h-8 lg:h-12"></li>
 					<li class="ml-auto"></li>
 					<li class="landing-item hidden lg:block"><a href="#" target="__blank">Market</a></li>
-					<li class="landing-item hidden lg:block"><a href="#" target="__blank">FAQ</a></li>
+					<li class="landing-item hidden lg:block"><a href="#" target="__blank">Docs</a></li>
 					<li class="landing-item hidden lg:block"><a href="#" target="__blank">Whitepaper</a></li>
 					<li class="landing-item hidden lg:block">
 						<span class="lang-select-wrapper lang-select-wrapper--dark">
@@ -39,9 +80,18 @@
 							</div>
 						</span>
 					</li>
-					<li class="cursor-pointer text-xl lg:hidden" ><i aria-controls="responsive-navbar-nav" aria-label="Toggle navigation" class="anticon anticon-menu navbar-toggler collapsed"><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i></li>
-				</ul>
+					<li class="cursor-pointer text-xl lg:hidden dropdown" onclick="myFunction()"><i aria-controls="responsive-navbar-nav" aria-label="Toggle navigation" class="anticon anticon-menu navbar-toggler collapsed" "><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i>
+						
+<div id="myDropdown" class="dropdown-content">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				  </div>						
+					</li>
+					
+				</ul>				
 			</nav>
+			
 			<section>
 				<div class="relative mb-4">
 					<section class="bg-black stars pb-12 pt-24">
@@ -53,7 +103,7 @@
 								<h1 class="text-white text-xl font-bold">...coming soon!</h1>
 								<figure class="animated-background gradient-box-green-yellow text-center clip-text text-3xl lg:text-7xl font-bold">$XLEND PRESALE</figure>
 								<p class="max-w-2xl mx-auto my-8 text-xl whitespace-pre-line">YAVAXLEND Protocol (XLEND) is a crypto-collaterized lending and borrowing platform on Binance Smart Chain.</p>
-								<a href="app/" target="_blank" rel="noopener noreferrer">
+								<a href="#" target="_blank" rel="noopener noreferrer">
 									<button class="gradient-box-green-yellow animated-background focus:outline-none w-64 h-15.5 text-white uppercase font-bold text-xl" style="padding: 3px;">
 										<span class="bg-black leading-none flex items-center justify-center h-full">Launch App</span>
 									</button>
@@ -138,13 +188,50 @@
 		</section>
 		<footer class="home-footer">
 			<section class="fixed-container">
+				<!--<div class="footer-menu">
+					<ul>
+						<li>Multiplier’s Apps</li>
+						<li><a href="@" target="_blank" rel="noopener noreferrer">MXX to bMXX Converter</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">YAVAXLEND (MCL)</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">Simplified Stable Bonds</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">TakoSwap</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">CEFI Lending Platform</a></li>
+					</ul>
+					<ul><li>Support</li><li><a href="" target="_blank" rel="noopener noreferrer">FAQ</a></li><li><a href="" target="_blank" rel="noopener noreferrer">Terms of Service</a></li><li><a href="
+					</ul>
+					<ul><li>Documentation</li><li><a href="" target="_blank" rel="noopener noreferrer">Team</a></li><li><a href="" target="_blank" rel="noopener noreferrer">MCL Litepaper</a></li><li><a href="" target="_blank" rel="noopener noreferrer">SSB Whitepaper</a></li><li><a href="" target="_blank" rel="noopener noreferrer">TakoSwap Litepaper</a></li>
+					</ul>
+					<ul><li>Audit Reports</li><li><a href="" target="_blank" rel="noopener noreferrer">MCL report 1 (CertiK)</a></li><li><a href="" target="_blank" rel="noopener noreferrer">MCL report 2 (Kudelski)</a></li><li><a href="" target="_blank" rel="noopener noreferrer">SSB Report</a></li><li><a href="" target="_blank" rel="noopener noreferrer">TakoSwap Report</a></li>
+					</ul>
+				</div>-->
 				<p class="text-center pb-6">Copyright © 2021 YAVAXLEND.Finance</p>
 			</section>
 		</footer>
 	</section>
 </div>
-
+<script src="files/jquery.js"></script>
 <script src="files/chunk-vendors.84f06a13.js"></script>
-<script src="files/app.79d504fa.js.download"></script>
+<script src="files/app.79d504fa.js"></script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.anticon-menu')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
