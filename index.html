@@ -10,8 +10,6 @@
 		<link href="files/app.79d504fa.js" rel="preload" as="script">
 		<link href="files/chunk-vendors.42a9d6b4.css" rel="stylesheet">
 		<link href="files/app.dffdc57e.css" rel="stylesheet">
-	<link href="db/app.76f406c0.css" rel="preload" as="style">
-	<link href="db/chunk-vendors.d8522343.css" rel="preload" as="style">
 <style>
 .anticon-menu {
   background-color: #000;
@@ -22,6 +20,11 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 990px) {
+.anticon-menu {
+	display: none;
+ }	
+}
 .anticon-menu:hover, .anticon-menu:focus {
   background-color: green;
 }
@@ -49,7 +52,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: yellow; color:green;}
 
 .show {display: block;}
 </style>
@@ -67,7 +70,7 @@
 					<li class="ml-auto"></li>
 					<li class="landing-item hidden lg:block"><a href="#market" class="scroll">Market</a></li>
 					<li class="landing-item hidden lg:block"><a href="#" target="__blank">Docs</a></li>
-					<li class="landing-item hidden lg:block"><a href="yavaxlend_whitepaper.pdf" target="__blank">Litepaper</a></li>
+					<li class="landing-item hidden lg:block"><a href="yavaxlend_whitepaper" target="__blank">Litepaper</a></li>
 					<li class="landing-item hidden lg:block">
 						<span class="lang-select-wrapper lang-select-wrapper--dark">
 							<div class="hidden lg:block">
@@ -82,14 +85,14 @@
 							</div>
 						</span>
 					</li>
-					<li class="cursor-pointer text-xl lg:hidden dropdown" onclick="myFunction()"><i aria-controls="responsive-navbar-nav" aria-label="Toggle navigation" class="anticon anticon-menu navbar-toggler collapsed" "><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i>
+					<li class="cursor-pointer text-xl dropdown" onclick="myFunction()"><i aria-controls="responsive-navbar-nav" aria-label="Toggle navigation" class="anticon anticon-menu navbar-toggler collapsed" "><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i>
 						
 <div id="myDropdown" class="dropdown-content">
 					<a href="#market" class="scroll">Market</a>
 					<a href="#">Docs</a>
-					<a href="yavaxlend_whitepaper.pdf">Litepaper 3</a>
+					<a href="yavaxlend_whitepaper.pdf">Litepaper</a>
 					<hr>
-					<a href="https://discord.gg/DCYJUs9q7S">Discord</a>	
+					<a href="https://discord.gg/DCYJUs9q7S">Discord</a>
 				  </div>						
 					</li>
 					
@@ -192,13 +195,30 @@
 		</section>
 		<footer class="home-footer">
 			<section class="fixed-container">
-				
+				<!--<div class="footer-menu">
+					<ul>
+						<li>Multiplier’s Apps</li>
+						<li><a href="@" target="_blank" rel="noopener noreferrer">MXX to bMXX Converter</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">YAVAXLEND (MCL)</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">Simplified Stable Bonds</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">TakoSwap</a></li>
+						<li><a href="" target="_blank" rel="noopener noreferrer">CEFI Lending Platform</a></li>
+					</ul>
+					<ul><li>Support</li><li><a href="" target="_blank" rel="noopener noreferrer">FAQ</a></li><li><a href="" target="_blank" rel="noopener noreferrer">Terms of Service</a></li><li><a href="
+					</ul>
+					<ul><li>Documentation</li><li><a href="" target="_blank" rel="noopener noreferrer">Team</a></li><li><a href="" target="_blank" rel="noopener noreferrer">MCL Litepaper</a></li><li><a href="" target="_blank" rel="noopener noreferrer">SSB Whitepaper</a></li><li><a href="" target="_blank" rel="noopener noreferrer">TakoSwap Litepaper</a></li>
+					</ul>
+					<ul><li>Audit Reports</li><li><a href="" target="_blank" rel="noopener noreferrer">MCL report 1 (CertiK)</a></li><li><a href="" target="_blank" rel="noopener noreferrer">MCL report 2 (Kudelski)</a></li><li><a href="" target="_blank" rel="noopener noreferrer">SSB Report</a></li><li><a href="" target="_blank" rel="noopener noreferrer">TakoSwap Report</a></li>
+					</ul>
+				</div>-->
 				<p class="text-center pb-6">Copyright © 2021 YAVAXLEND.Finance</p>
 			</section>
 		</footer>
 	</section>
 </div>
 <script src="files/jquery.js"></script>
+<script src="files/chunk-vendors.84f06a13.js"></script>
+<script src="files/app.79d504fa.js"></script>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
