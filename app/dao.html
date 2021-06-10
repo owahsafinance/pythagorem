@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="db/style.css"/>
+	<link href="db/app.76f406c0.css" rel="preload" as="style">
+	<link href="db/chunk-vendors.d8522343.css" rel="preload" as="style">
+	<link href="db/chunk-vendors.d8522343.css" rel="stylesheet">
+	<link href="db/app.76f406c0.css" rel="stylesheet">
+	<link rel="stylesheet" href="db/style.css"/>
+	<link rel="stylesheet" href="db/css2">
+	<link rel="stylesheet" type="text/css" href="db/view-Dashboard.f98be25f.css">
+	<link rel="stylesheet" type="text/css" href="db/common-ActionPage-Approval.90be8514.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Action-index-helper.c6b85961.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Action.95063baa.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Reward.293123dd.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Reward-table.0e433876.css">
+	<script charset="utf-8" src="db/view-Reward-table.c07d9af7.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="db/view-Governance.75c1e7a4.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Governance-Staking.a86ed863.css">
+
+    <link rel="icon" href="db/yavaxlendlogo.png">
+	<title>YAVAX Lend (XLEND)</title>
+  </head>
+  <body id="body-pd">
+ <noscript><strong>We're sorry but YAVAX Lend (XLEND) doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+    <!-- Header Area -->
+    <header id="header">
+      <!-- Header Toggler for Sidebar -->
+      <div class="header-toggler">
+        <span class="material-icons material-icons-outlined" id="header-toggle">
+          <i aria-label="icon: menu"  aria-controls="responsive-navbar-nav" class="anticon anticon-menu  navbar-toggler collapsed header-toggler"><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i>
+        </span>
+      </div>
+
+      <!-- User Section -->
+		<div class="header-user checkconnect">
+			<p class="text-center pt-2 pb-4 px-4">
+				<a href="#" class=""  id="checkconnect">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;"  id="btn-connect" >
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connect wallet</span>
+					</button>
+				</a>
+				
+				<a href="#" class="" id="isconnected" style="display:none;">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px;color:green;" id="btn-disconnect">
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Disconnect</span>
+					</button>
+				</a>
+			</p>
+		</div>
+    </header>
+
+    <!-- Left Sidebar/Navigation Bar -->
+    <div class="left-navbar" id="l-navbar">
+      <nav class="nav">
+        <div class="navbar-main-items">
+          <a href="index" class="navbar-logo">
+            <span class="material-icons material-icons-outlined nav-logo-icon">
+              <img src="db/overview.svg" alt="Dashboard" class="flex-none w-5 h-auto mr-2">
+            </span>
+            <span class="nav-logo-name">Overview</span>
+          </a>
+
+          <div class="navbar-menu-items">
+            <!-- Dashboard -->
+            <a href="dashboard" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon">
+                <img src="db/dashboard.svg" alt="Dashboard" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> Dashboard </span>
+            </a>
+
+            <!-- Analytics -->
+            <a href="reward.php" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <img src="db/reward.svg" alt="My Rewards" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> My Reward </span>
+            </a>
+
+            <!-- Payments -->
+            <a href="position" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon">
+                <img src="db/liquidation.svg" alt="Liquidation" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> Liquidation </span>
+            </a>
+
+            <!-- Email -->
+            <a href="history" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <img src="db/history.svg" alt="History" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> History </span>
+            </a>
+
+            <!-- Users -->
+            <a href="dao" class="nav-item active">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <img src="db/governance.svg" alt="Governance" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> Governance </span>
+            </a>
+
+            <!-- Bug Reports -->
+            <a href="https://yavaxlend.finance/docs/" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <i aria-label="icon: question-circle" class="anticon anticon-question-circle flex-none text-xl mr-2"><svg viewBox="64 64 896 896" data-icon="question-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"></path></svg></i>
+              </span>
+              <span class="nav-item-name"> FAQ </span>
+            </a>
+          </div>
+        </div>
+        <!-- Logout Icon -->
+        <a href="#" class="nav-item">
+          <span class="material-icons material-icons-outlined nav-item-icon">
+            
+          </span>
+          <span class="nav-item-name"></span>
+        </a>
+      </nav>
+    </div>
+    <!-- Main Panel -->
+    <div class="main h-full flex items-stretch">
+		<!--********** next page-->
+		<div class="flex-1 flex flex-col overflow-x-auto"><section class="fluid flex-1 w-full"><section class="history pb-4 md:pb-8"><header class="flex items-center py-8 flex-wrap justify-center"><div class="hidden sm:block"><h1 class="text-4xl font-black leading-none">Governance</h1><p class="sm:text-left text-center"><div class="text-center md:text-left">Staking in the governance module allows XLEND holders to govern the YAVAXLEND Markets and Reserves</div></p></div><div class="mx-auto xl:ml-auto xl:mr-0 mt-0 sm:mt-6 md:mt-0"><div class="text-left xl:text-right mt-4 xl:mt-0"><div class="text-xl font-gray capitalize">Total value staked</div><div class="text-4xl mb-2 font-black leading-none">0.00 USD</div></div></div></header><div class="xl:flex xl:items-center flex-wrap xl:justify-between"><p class="mb-4 mt-4 md:mt-8 text-center xl:text-left"><button type="button" class="ant-btn border-outline"><a target="__blank" href="#">Vote / Propose</a></button></p></div><main><section class="reward py-4 md:py-8"><section class="reward-table-content pb-4 md:pb-8"><main class="mb-4 md:mb-8"><div class="block md:flex items-center justify-between flex-wrap"><div><div class="font-black text-xl">Staking Rewards</div><div>Daily Block Distributions: 40000 XLEND</div></div><div class="flex md:block"><button disabled="disabled" type="button" class="ant-btn ant-btn-lg bg-button text-on-button mt-6 w-56 ml-auto md:ml-0 "><span>Claim XLEND</span></button></div></div><section class="data-table reward-table"><div class="ant-table-wrapper"><div class="ant-spin-nested-loading"><div class="ant-spin-container"><div class="ant-table ant-table-scroll-position-left ant-table-default"><div class="ant-table-content"><!----><div class="ant-table-body"><table class=""><colgroup><col><col style="width: 320px; min-width: 320px;"></colgroup><thead class="ant-table-thead"><tr><th key="symbol" class="ant-table-align-left" style="text-align: left;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Assets</span><span class="ant-table-column-sorter"></span></div></span></th><th key="rewardBalance" class="ant-table-align-right ant-table-row-cell-break-word ant-table-row-cell-last" style="text-align: right;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Rewards</span><span class="ant-table-column-sorter"></span></div></span></th></tr></thead><tbody class="ant-table-tbody"><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x4131b87f74415190425ccd873048c708f8005823"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/yavaxlend.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">XLEND</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>XLEND</span></span></strong></td></tr></tbody></table></div></div></div></div></div></div></section></main><main><div class="block md:flex items-center justify-between flex-wrap"><div><div class="font-black text-xl">Platform Rewards</div><div>Stakers will earn 20% of the loan origination and synXLEND fees</div></div><div class="flex md:block"><button disabled="disabled" type="button" class="ant-btn ant-btn-lg bg-button text-on-button mt-6 w-56 ml-auto md:ml-0 "><span>Claim Rewards</span></button></div></div><section class="data-table reward-table"><div class="ant-table-wrapper"><div class="ant-spin-nested-loading"><div class="ant-spin-container"><div class="ant-table ant-table-scroll-position-left ant-table-default"><div class="ant-table-content"><!----><div class="ant-table-body"><table class=""><colgroup><col><col style="width: 320px; min-width: 320px;"></colgroup><thead class="ant-table-thead"><tr><th key="symbol" class="ant-table-align-left" style="text-align: left;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Assets</span><span class="ant-table-column-sorter"></span></div></span></th><th key="rewardBalance" class="ant-table-align-right ant-table-row-cell-break-word ant-table-row-cell-last" style="text-align: right;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Rewards</span><span class="ant-table-column-sorter"></span></div></span></th></tr></thead><tbody class="ant-table-tbody"><tr class="ant-table-row ant-table-row-level-0" data-row-key="0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/bnb.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">BNB</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>BNB</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/usdc.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">USDC</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>USDC</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/btcb.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">DAI</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>DAI</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x55d398326f99059fF775485246999027B3197955"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/usdt.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">USDT</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>USDT</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/busd.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">BUSD</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>BUSD</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x2170Ed0880ac9A755fd29B2688956BD959F933F8"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/eth.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">ETH</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>ETH</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/pancakeswap.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">CAKE</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>CAKE</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x4338665CBB7B2485A8855A139b75D5e34AB0DB94"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/link.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">LINK</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>LINK</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/trustwallet.png" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">TWT</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>TWT</span></span></strong></td></tr><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47"><td class="" style="text-align: left;"><strong class="flex items-center"><img src="db/dai.webp" class="crypto-icon mr-2 inline-block text-2xl lg:text-4xl"><span class="font-black">DAI</span></strong></td><td class="ant-table-row-cell-break-word" style="text-align: right;"><strong><span class="font-black text-green-600 flex justify-end items-center"><section class="mr-1">0</section><span>DAI</span></span></strong></td></tr></tbody></table></div></div></div></div></div></div></section></main></section></section></main></section></section><section class="text-on-body text-center py-2">Build.070621.1</section></div>
+		<!--//next page ends-->
+    </div>
+    <!-- Main JavaScript -->
+    <script src="db/main.js"></script>
+	<script type="text/javascript" src="web3/web3.min.js"></script>
+    <script type="text/javascript" src="web3/index.js"></script>
+    <script type="text/javascript" src="web3/index.min.js"></script>
+    <script type="text/javascript" src="web3/react.min.js"></script>
+    <script type="text/javascript" src="web3/fortmatic.js"></script>
+    <script type="text/javascript" src="web3/example.js"></script>
+  </body>
+</html>
