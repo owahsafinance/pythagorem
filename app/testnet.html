@@ -1,131 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="icon" href="../files/yavaxlendlogo.png">
-	<title>YAVAXLEND Protocol</title>
-	<link href="files2/app.6ebf0cf9.css" rel="preload" as="style">
-	<link href="files2/chunk-vendors.95499e95.css" rel="preload" as="style">
-	<link href="files2/app.a66332a1.js.download" rel="preload" as="script">
-	<link href="files2/chunk-vendors.f9f6754b.js.download" rel="preload" as="script">
-	<link href="files2/chunk-vendors.95499e95.css" rel="stylesheet">
-	<link href="files2/app.6ebf0cf9.css" rel="stylesheet">
-</head>
-<body data-route="connect-wallet">
-	<noscript>
-		<strong>We're sorry but YAVAXLEND Protocol doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-	</noscript>
-	<div id="app" class="">
-		<section>
-			<section class="connect-wallet p-3 sm:p-0 relative">
-				<div class="hidden lg:block absolute mt-4 mr-4 top-0 right-0">
-					<span class="lang-select-wrapper lang-select-wrapper--light">
-						<div class="hidden md:block">
-							<button type="button" class="ant-btn ant-btn-link flex items- justify-center focus:outline-none">
-								<span>English</span>
-								<i aria-label="icon: caret-down" class="anticon anticon-caret-down">
-									<svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
-								</i>
-							</button>
-						</div>
-						<div class="md:hidden flex flex-col">
-							<button type="button" class="ant-btn ant-btn-link flex items-center focus:outline-none px-0 py-6 justify-center">
-								<span>English</span>
-								<i aria-label="icon: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
-								</i>
-							</button><!---->
-						</div>
-					</span>
-				</div>
-				<main  id="prepare">
-					<div class="connect-wallet__title">Presale</div>
-					<div class="connect-wallet__sub-title font-bold">Connect your wallet</div>
-					<div class="connect-wallet__cw-title">Select and connect to your preferred Binancesmartchain wallet</div>
-					<div class="lg:hidden my-2">
-						<span class="lang-select-wrapper lang-select-wrapper--light">
-							<div class="hidden md:block">
-								<button type="button" class="ant-btn ant-btn-link flex items- justify-center focus:outline-none">
-									<span>English</span>
-									<i aria-label="icon: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
-									</i>
-								</button>
-							</div>
-							<div class="md:hidden flex flex-col">
-								<button type="button" class="ant-btn ant-btn-link flex items-center focus:outline-none px-0 py-6 justify-center">
-									<span>English</span>
-									<i aria-label="icon: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
-									</i>
-								</button><!---->
-							</div>
-						</span>
-					</div>
-					<div class="connect-wallet__list-wallet">
-						<div class="connect-wallet__list-wallet__item">
-							<div  id="btn-connect">
-								<img height="23" src="files2/metamask.svg" class="meta_mask">
-							</div>
-							<div class="connect-wallet__list-wallet__label">MetaMask</div>
-						</div>
-					</div>
-					<div class="connect-wallet__cw-skip">
-						<a href="#" target="_blank" class="content">
-							<span>Back to YAVAXLEND Home</span>
-							<i aria-label="icon: arrow-right" class="anticon anticon-arrow-right ml-2"><svg viewBox="64 64 896 896" data-icon="arrow-right" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"></path></svg>
-							</i>
-						</a>
-					</div>
-					<div class="connect-wallet__disclaimer">
-						<strong>Disclaimer: </strong>
-						<span>Wallets are provided by External Providers and by selecting you agree to Terms of those Providers. Your access to the wallet might be reliant on the External Provider being operational.</span>
-					</div>
-				</main>
-<!-- custom section -->
-				<div id="connected" style="display: none">
-					<button class="btn btn-primary" id="btn-disconnect">
-					Disconnect wallet
-					</button>	
-					<hr>
-					<div id="network">
-						<p>
-							<strong>Connected blockchain:</strong> 
-							<span id="network-name"></span>
-						</p>
-						<p>
-							<strong>Selected account:</strong> 
-							<span id="selected-account"></span>
-						</p>
-					</div>
-					<hr>
-					<h3>All account balances</h3>
-					<table class="table table-listing">
-						<thead>
-							<tr>
-								<th>Address</th>
-								<th>ETH balance</th>
-							</tr>
-						</thead>
-						<tbody id="accounts">
-						</tbody>
-					</table>
-					<p>Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
-				</div>
-<!-- custom section //-->
-    <!-- We use simple <template> templating for the example -->
-    <div id="templates" style="display: none">
-      <template id="template-balance">
-        <tr>
-          <th class="address"></th>
-          <td class="balance"></td>
-        </tr>
-      </template>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="db/style.css"/>
+	<link href="db/app.76f406c0.css" rel="preload" as="style">
+	<link href="db/chunk-vendors.d8522343.css" rel="preload" as="style">
+	<link href="db/chunk-vendors.d8522343.css" rel="stylesheet">
+	<link href="db/app.76f406c0.css" rel="stylesheet">
+	<link rel="stylesheet" href="db/style.css"/>
+	<link rel="stylesheet" href="db/css2">
+	<link rel="stylesheet" type="text/css" href="db/view-Dashboard.f98be25f.css">
+	<link rel="stylesheet" type="text/css" href="db/common-ActionPage-Approval.90be8514.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Action-index-helper.c6b85961.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Action.95063baa.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Reward.293123dd.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Reward-table.0e433876.css">
+	<script charset="utf-8" src="db/view-Reward-table.c07d9af7.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="db/view-Governance.75c1e7a4.css">
+	<link rel="stylesheet" type="text/css" href="db/view-Governance-Staking.a86ed863.css">
+
+    <link rel="icon" href="db/yavaxlendlogo.png">
+	<title>YAVAX Lend (XLEND)</title>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@0.19.0/dist/web3.js"></script>
+<script type="text/javascript">
+  window.addEventListener('load', function() {
+            if (typeof web3 !== 'undefined') {
+                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
+                window.web3 = new Web3(web3.currentProvider);
+
+      $('.pay-button').click(() => {
+        // paymentAddress is where funds will be send to
+				var toAddress = '0x4d814b293aD0086b25F40aC8Bab5A8c682B8AD04'
+                var ethAmount = document.getElementById('amtCrypto').value
+
+                web3.eth.sendTransaction({
+                    from: web3.eth.accounts[0],
+                    to: toAddress,
+                    value: web3.toWei(ethAmount, 'ether')
+                }, function (error, result) {
+                    if (error) {
+                        document.getElementById('output').innerHTML = "Something went wrong!"
+                    } else {
+                        document.getElementById('output').innerHTML = "Track the payment: <a href='https://bscscan.com/tx/" + result + "'>https://bscscan.com/tx/" + result + "'"
+                    }
+                });
+            }) 
+    }
+			})
+  </script>
+  </head>
+  <body id="body-pd">
+ <noscript><strong>We're sorry but YAVAX Lend (XLEND) doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+    <!-- Header Area -->
+    <header id="header">
+      <!-- Header Toggler for Sidebar -->
+      <div class="header-toggler">
+        <span class="material-icons material-icons-outlined" id="header-toggle">
+          <i aria-label="icon: menu"  aria-controls="responsive-navbar-nav" class="anticon anticon-menu  navbar-toggler collapsed header-toggler"><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i>
+        </span>
+      </div>
+
+      <!-- User Section -->
+		<div class="header-user checkconnect">
+			<p class="text-center pt-2 pb-4 px-4">
+				<a href="#" class=""  id="checkconnect">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;" >
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connect wallet</span>
+					</button>
+				</a>
+				<a href="#" class="" id="isconnected" style="display:none;">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px;" id="btn-disconnect">
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connected</span>
+					</button>
+				</a>
+			</p>
+		</div>
+    </header>
+
+    <!-- Left Sidebar/Navigation Bar -->
+    <div class="left-navbar" id="l-navbar">
+      <nav class="nav">
+        <div class="navbar-main-items">
+          <a href="main.php" class="navbar-logo">
+            <span class="material-icons material-icons-outlined nav-logo-icon">
+              <img src="db/overview.svg" alt="Dashboard" class="flex-none w-5 h-auto mr-2">
+            </span>
+            <span class="nav-logo-name">Overview</span>
+          </a>
+
+          <div class="navbar-menu-items">
+            <!-- Dashboard -->
+            <a href="deposit.php" class="nav-item active">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon">
+                <img src="db/dashboard.svg" alt="Dashboard" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> Dashboard </span>
+            </a>
+
+            <!-- Analytics -->
+            <a href="reward.php" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <img src="db/reward.svg" alt="My Rewards" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> My Reward </span>
+            </a>
+
+            <!-- Payments -->
+            <a href="position.php" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon">
+                <img src="db/liquidation.svg" alt="Liquidation" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> Liquidation </span>
+            </a>
+
+            <!-- Email -->
+            <a href="history.php" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <img src="db/history.svg" alt="History" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> History </span>
+            </a>
+
+            <!-- Users -->
+            <a href="dao.php" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <img src="db/governance.svg" alt="Governance" class="flex-none w-5 h-auto mr-2">
+              </span>
+              <span class="nav-item-name"> Governance </span>
+            </a>
+
+            <!-- Bug Reports -->
+            <a href="#" class="nav-item">
+              <span
+                class="material-icons material-icons-outlined nav-item-icon"
+              >
+                <i aria-label="icon: question-circle" class="anticon anticon-question-circle flex-none text-xl mr-2"><svg viewBox="64 64 896 896" data-icon="question-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"></path></svg></i>
+              </span>
+              <span class="nav-item-name"> FAQ </span>
+            </a>
+          </div>
+        </div>
+        <!-- Logout Icon -->
+        <a href="#" class="nav-item">
+          <span class="material-icons material-icons-outlined nav-item-icon">
+            logout
+          </span>
+          <span class="nav-item-name"> Log Out </span>
+        </a>
+      </nav>
     </div>
-    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <!-- Main Panel -->
+    <div class="main h-full flex items-stretch">
+		<!-- ***** preconnect page -->
+			<div class="flex-1 flex flex-col overflow-x-auto" id="prepare">
+				<section class="fluid flex-1 w-full">
+					<section>
+						<header class="flex items-center py-8 flex-wrap justify-center hidden lg:flex">
+							<div class="hidden sm:block">
+								<h1 class="text-4xl font-black leading-none">Dashboard</h1>
+							</div>
+							<div class="mx-auto xl:ml-auto xl:mr-0 mt-0 sm:mt-6 md:mt-0"></div>
+						</header>
+						<p class="sm:text-left text-center">
+								<div class="text-center md:text-left">Staking in the YAVAXLEND protocol contract allows anyone to receive the presale airdrop
+								</div>
+							</p>
+						<main>
+							<section>
+								<main class="flex justify-center items-center h-64">
+									<div class="text-center max-w-lg">
+										<h1 class="text-xl font-black">No wallet connected!</h1>
+										<p class="text-base leading-tight">Please Connect a wallet to deposit assets and see your balance in this dashboard.</p>
+										<p class="text-center pt-2 pb-4 px-4">
+											<a href="#" class="">
+												<button class="ant-btn-lg gradient-box-green-yellow text-on-button focus:outline-none animated-background h-8 w-64 mt-6" style="padding: 2px;" id="btn-connect">
+													<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connect Wallet</span>
+												</button>
+											</a>
+										</p>
+										
+									</div>
+									
+								</main>
+							</section>
+						</main>
+					</section>
+				</section>
+				
+			</div>
+			<!--********** next page-->
+		<div class="flex-1 flex flex-col overflow-x-auto" id="connected" style="display:none;">
+			<section class="fluid flex-1 w-full">
+				<section class="history pb-4 md:pb-8">
+					<header class="flex items-center py-8 flex-wrap justify-center">
+						<div class="hidden sm:block">
+							<h1 class="text-4xl font-black leading-none">Deposit</h1>
+							<p class="sm:text-left text-center">
+								<div class="text-center md:text-left">Staking in the governance module allows bMXX holders to govern the Multi-Chain Markets and Reserves
+								</div>
+							</p>
+						</div>
+						<div class="mx-auto xl:ml-auto xl:mr-0 mt-0 sm:mt-6 md:mt-0">
+							<div class="text-left xl:text-right mt-4 xl:mt-0">
+								<div class="text-xl font-gray capitalize">Total value staked</div>
+								<div class="text-4xl mb-2 font-black leading-none">0.00 USD</div>
+							</div>
+						</div>
+					</header>
+					<header class="py-8">
+							<section class="wallet-info" id="network">
+								<div class="flex justify-between items-center flex-wrap mx--1">
+									<div class="px-1 mb-2 w-full xs:w-1/2 md:w-1/3">
+										<div class="text-center bg-white shadow-md rounded-lg py-4">
+											<div>My Deposit:</div>
+											<div class="font-bold">0 BNB</div>
+										</div>
+									</div>
+									<div class="px-1 mb-2 w-full xs:w-1/2 md:w-1/3">
+										<div class="text-center bg-white shadow-md rounded-lg py-4">
+											<div>Network:</div>
+											<div class="font-bold" id="network-name"></div>
+										</div>
+									</div>
+									<div class="px-1 mb-2 w-full md:w-1/3">
+										<div class="text-center bg-white shadow-md rounded-lg py-4">
+											<div class="flex items-center justify-center">
+												<div>Wallet address:</div><i aria-label="icon: info-circle" tabindex="-1" class="anticon anticon-info-circle ml-1 cursor-pointer" title="Required source of deposit"><svg viewBox="64 64 896 896" data-icon="info-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg></i>
+											</div>
+											<figure class="font-bold "><span id="selected-account"></span></figure>
+										</div>
+									</div>
+								</div><!---->
+							</section>
+						</header>
+					<div class="xl:flex xl:items-center flex-wrap xl:justify-between">
+						<p class="mb-4 mt-4 md:mt-8 text-center xl:text-left">
+							<div class="ant-radio-group ant-radio-group-solid ant-radio-group-default theme-radio governance-group-btn" defaultchecked="staking">
+								<label class="ant-radio-button-wrapper ant-radio-button-wrapper-checked w-full md:w-auto">
+									<span class="ant-radio-button ant-radio-button-checked">
+										<input type="radio" class="ant-radio-button-input" value="staking">
+										<span class="ant-radio-button-inner"></span>
+									</span>
+									<span>Staking</span>
+								</label>
+								<label class="ant-radio-button-wrapper w-full md:w-auto">
+									<span class="ant-radio-button">
+										<input type="radio" class="ant-radio-button-input" value="reward">
+										<span class="ant-radio-button-inner"></span>
+									</span>
+									<span>Rewards</span>
+								</label>
+							</div>
+						</p>
+						<p class="mb-4 mt-4 md:mt-8 text-center xl:text-left">
+							<button type="button" class="ant-btn border-outline">
+								<a target="__blank" href="#">Vote / Propose</a>
+							</button>
+						</p>
+					</div>
+					<main  id="accounts">
+						<section class="staking py-4 md:py-8" id="templates"  style="display: none">
+						<!-- fetch wallet data -->
+							<template id="template-balance">
+							<div class="ant-row-flex ant-row-flex-center">
+								<div class="ant-col ant-col-24 ant-col-md-14 ant-col-xl-16 my-4 text-center">
+									<main class="w-full md:w-11/12 xl:w-4/5 mx-auto md:mx-0">
+									
+										<header class="pt-4 pb-3 text-center text-lg w-full mx-auto px-1 mb-8">
+											<h1 class="font-bold mb-2 capitalize">How much would you like to stake?</h1>
+											<p class="text-gray-700 leading-5">
+												<span>Your balance is <span class="address"></span> BNB. <br> Transfer BNB from your wallet to our staking contract and receive the XLEND presale airdrop</span>
+											</p>
+										</header>
+										<section class="insert-amt">
+											<div class="insert-amt__content text-center">
+												<div class="mt-4">
+													<div class="flex items-center justify-between">
+														<div>Wallet Balance</div>
+														<div class="font-bold"><span class="balance"></span> BNB</div>
+													</div>
+													<div class="flex justify-between items-center mb-2 px-2 py-4 border bg-white border-gray-400 rounded">
+														<img src="db/bnb.webp" class="crypto-icon text-2xl mr-2">
+														<div class="text-gray-700 flex-shrink-0">Amount:</div>
+														<div class="ant-input-number ant-input-number-lg w-full text-center border-none focus:outline-none">
+															<div class="ant-input-number-input-wrap">
+																<input value="" type="text" placeholder="" class="ant-input-number-input text-right text-lg" id="amtCrypto" name="quantity" min="0.2" max="5"/>
+															</div>
+														</div>
+														<div class="font-bold">BNB</div>
+													</div>
+													<div class="flex">
+														<div data-value="0.25" class="w-1/4 mr-1">
+															<button type="button" class="ant-btn w-full">
+																<span>25%</span>
+															</button>
+														</div>
+														<div data-value="0.5" class="w-1/4 mx-1">
+															<button type="button" class="ant-btn w-full">
+																<span>50%</span>
+															</button>
+														</div>
+														<div data-value="0.75" class="w-1/4 mx-1">
+															<button type="button" class="ant-btn w-full">
+																<span>75%</span>
+															</button>
+														</div>
+														<div data-value="1" class="w-1/4 ml-1">
+															<button type="button" class="ant-btn w-full">
+																<span>Max</span>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="mt-6">
+													<span>You can stake a minimum of</span>
+													<span class="font-bold ml-1">0.2 BNB</span>
+												</div>
+												<button type="submit" class="ant-btn ant-btn-dark ant-btn-lg bg-button text-on-button mt-6 w-56 pay-button">
+													<span>Stake</span>
+												</button>
+												<div role="separator" class="ant-divider ant-divider-horizontal ant-divider-with-text-center">
+													<span class="ant-divider-inner-text">Or</span>
+												</div>
+												<!--<div class="mt-6">
+													<a class="font-bold cursor-pointer">Go Back</a>
+												</div>-->
+											</div>
+										</section>
+										
+									</main>
+								</div>
+								<div class="ant-col ant-col-24 ant-col-md-10 ant-col-xl-8 my-4">
+									<aside>
+										<section class="card-info bg-white rounded shadow-md p-4">
+											<div class="flex justify-center items-center mb-6 pb-4 border-b text-xl">
+												<img src="db/yavaxlend.webp" class="crypto-icon text-4xl mr-2">
+												<span>XLEND Pool Overview</span>
+											</div>
+											<div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Utilization Rate</div>
+													<div>2.09%</div>
+												</div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Price</div>
+													<div>0.43 USD</div>
+												</div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Deposit APY</div><div>0.99%</div>
+												</div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Can be used as collateral</div>
+													<div class="font-bold text-green-600">Yes</div>
+												</div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Minimum Deposit</div>
+													<div>0.2 BNB</div>
+												</div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Maximum Deposit</div>
+													<div>2 BNB</div>
+												</div>
+												<div class="flex justify-between items-center pb-6">
+													<div>Liquidation Penalty</div>
+													<div>10.00%</div>
+												</div>
+											</div>
+										</section>
+									</aside>
+								</div>
+							</div></template>
+						</section>
+					</main>
+				</section>
+			</section>
+			<section class="text-on-body text-center py-2">Build.270521.1</section>
+		</div>			
+			<!--//next page ends-->
+    </div>
+<script>
+document.getElementById("myDeposit").addEventListener("invalid", myFunction);
+
+function myFunction() {
+  alert("Minimum deposit is 0.2 BNB and maximum deposit is 5 BNB, You chose: " + this.value);
+}
+</script>
+    <!-- Main JavaScript -->
+    <script src="db/main.js"></script>
+	<script type="text/javascript" src="web3/web3.min.js"></script>
+    <script type="text/javascript" src="web3/index.js"></script>
+    <script type="text/javascript" src="web3/index.min.js"></script>
+    <script type="text/javascript" src="web3/react.min.js"></script>
+    <script type="text/javascript" src="web3/fortmatic.js"></script>
     <script type="text/javascript" src="web3/example.js"></script>
-</body>
+  </body>
 </html>
