@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="db/view-Governance.75c1e7a4.css">
 	<link rel="stylesheet" type="text/css" href="db/view-Governance-Staking.a86ed863.css">
 
-    <link rel="icon" href="db/yavaxlendlogo.webp">
+     <link rel="icon" href="db/yavaxlendlogo.webp">
 	<title>YAVAX Lend (XLEND)</title>
   </head>
   <body id="body-pd">
@@ -39,16 +39,52 @@
       <!-- User Section -->
 		<div class="header-user checkconnect">
 			<p class="text-center pt-2 pb-4 px-4">
-				<a href="#" class=""  id="checkconnect">
-					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;"  id="btn-connect" >
-						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connect wallet</span>
+				<a href="#" class=""  id="prepare">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;" id="btn-connect">
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full" id="checkconnect">Connect wallet</span>
 					</button>
 				</a>
-				
-				<a href="#" class="" id="isconnected" style="display:none;">
-					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px;color:green;" id="btn-disconnect">
-						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Disconnect</span>
+				<a href="#" class="" id="connected" style="display: none">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:green;" id="btn-disconnect">
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connected</span>
 					</button>
+									<div >
+						
+					<hr>
+					<div id="network">
+						<p>
+							<strong>Connected blockchain:</strong> 
+							<span id="network-name"></span>
+						</p>
+						<p>
+							<strong>Selected account:</strong> 
+							<span id="selected-account"></span>
+						</p>
+					</div>
+					<hr>
+					<h3>All account balances</h3>
+					<table class="table table-listing">
+						<thead>
+							<tr>
+								<th>Address</th>
+								<th>ETH balance</th>
+							</tr>
+						</thead>
+						<tbody id="accounts">
+						</tbody>
+					</table>
+					<p>Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
+				</div>
+<!-- ustom section //-->
+    <!-- We use simple <template> templating for the example -->
+    <div id="templates" style="display: none">
+      <template id="template-balance">
+        <tr>
+          <th class="address"></th>
+          <td class="balance"></td>
+        </tr>
+      </template>
+    </div>
 				</a>
 			</p>
 		</div>
@@ -76,7 +112,7 @@
             </a>
 
             <!-- Analytics -->
-            <a href="reward" class="nav-item active">
+            <a href="reward" class="nav-item">
               <span
                 class="material-icons material-icons-outlined nav-item-icon"
               >
@@ -95,7 +131,7 @@
             </a>
 
             <!-- Email -->
-            <a href="history" class="nav-item">
+            <a href="history" class="nav-item  active">
               <span
                 class="material-icons material-icons-outlined nav-item-icon"
               >
@@ -143,7 +179,7 @@
 						<header class="flex items-center py-8 flex-wrap justify-center">
 							<div class="hidden sm:block">
 								<h1 class="text-4xl font-black leading-none">My Rewards</h1>
-								<p class="sm:text-left text-center">Stakers will receive 70% off the lisiting price and can be claimed below</p>
+								<p class="sm:text-left text-center">Connect your wallet to view and claim your deposit reward below</p>
 							</div>
 							<div class="sm:ml-auto mt-0 sm:mt-6 md:mt-0"></div>
 						</header>
@@ -180,7 +216,7 @@
 															</table>
 														</div>
 														<div class="ant-table-placeholder">
-															<div class="ant-empty ant-empty-normal">
+															<div class="ant-empty ant-empty-normal"  id="isconnected" style="display:none;">
 																<div class="ant-empty-image">
 																	<svg width="64" height="41" viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0 1)" fill="none" fillRule="evenodd"><ellipse fill="#F5F5F5" cx="32" cy="33" rx="32" ry="7"></ellipse><g fillRule="nonzero" stroke="#D9D9D9"><path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"></path><path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" fill="#FAFAFA"></path></g></g></svg>
 																</div>
