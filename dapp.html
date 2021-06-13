@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<htmL>
+  <head>
+<link rel="prefetch" href="meta/34.f9cefb41.js">
+  </head>
+  <body>
+    <button class="enableEthereumButton btn">Enable Ethereum</button>
+<button class="sendEthButton btn">Send Eth</button>
+    
+<script type="text/javascript">
+  window.addEventListener('load', function() {
+            if (typeof web3 !== 'undefined') {
+                console.log('Web3 connected! ' + web3.currentProvider.constructor.name)
+                window.web3 = new Web3(web3.currentProvider);
+
+      $('.sendPay').click(() => {
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const sendEthButton = document.querySelector('.sendEthButton');
+
+let accounts = [];
+
+//Sending Ethereum to an address
+sendEthButton.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+}
+            }) 
+    }
+			})
+  </script>
+ <script src="meta/app.c544c946.js" defer></script>
+<script src="meta/4.1099f3bc.js" defer></script>
+<script src="meta/31.bc9a5b98.js" defer></script>
+<script src="/8.47c30305.js" defer></script>
+  </body>
+</html>
