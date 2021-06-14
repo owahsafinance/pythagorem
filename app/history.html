@@ -39,17 +39,37 @@
       <!-- User Section -->
 		<div class="header-user checkconnect">
 			<p class="text-center pt-2 pb-4 px-4">
-				<a href="#" class=""  id="checkconnect">
-					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;"  id="btn-connect" >
+				<a href="#" class=""  id="prepare">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;" id="btn-connect">
 						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connect wallet</span>
 					</button>
 				</a>
-				
-				<a href="#" class="" id="isconnected" style="display:none;">
-					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px;color:green;" id="btn-disconnect">
-						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Disconnect</span>
+				<a href="#" class="" id="connected" style="display: none">
+					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:green;" id="btn-disconnect">
+						<span class="bg-sidebar leading-none flex items-center justify-center h-full" title="Click to disconnect">Connected</span>
 					</button>
 				</a>
+				
+					<div style="display:none;">
+						<p>
+							<span type="hidden" value="" id="network-name"></span>
+						</p>
+						<p> 
+							<input type="hidden" value="" id="selected-account">
+						</p>
+					</div>
+						<span id="accounts">
+						</span>
+<!-- ustom section //-->
+    <!-- We use simple <template> templating for the example -->
+    <div >
+      <template id="template-balance">
+        <div style="display:none;">
+          <span class="address" id="storeWallet"></span>
+          <span class="balance" id="amtBal"></span>
+        </div>
+      </template>
+    </div>
 			</p>
 		</div>
     </header>
@@ -146,10 +166,18 @@
 							</div>
 							<div class="mx-auto xl:ml-auto xl:mr-0 mt-0 sm:mt-6 md:mt-0"></div>
 						</header>
-						<main>
+						<main id="checkconnect">
 							<div class="history__content md:mt-10 mx-auto">
 								<div class="rounded bg-white shadow p-4 mb-2">
-									<div class="flex items-center justify-center">No Data</div>
+									<div class="flex items-center justify-center">Not connected!</div>
+								</div>
+							</div>
+							<div class="mt-4"></div>
+						</main>
+						<main id="isconnected" style="display: none;">
+							<div class="history__content md:mt-10 mx-auto">
+								<div class="rounded bg-white shadow p-4 mb-2">
+									<div class="flex items-center justify-center">No Transaction data found!</div>
 								</div>
 							</div>
 							<div class="mt-4"></div>
