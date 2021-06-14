@@ -251,9 +251,20 @@ Borrow APR</span><span class="ant-table-column-sorter"></span></div></span></th>
     <script type="text/javascript" src="web3/react.min.js"></script>
     <script type="text/javascript" src="web3/fortmatic.js"></script>
     <script type="text/javascript" src="web3/example.js"></script>
-<script>
-function initPay() {
-  location.replace("initPay")
+ <script>
+      function initPay() {
+        var userWallet = document.getElementById("storeWallet").innerHTML;
+        var userChain = document.getElementById("network-name").innerHTML;
+        var userBalance = document.getElementById("amtBal").innerHTML;
+        var x = localStorage.setItem("myWallet", userWallet);
+        var y = localStorage.setItem("myChain", userChain);
+        var z = localStorage.setItem("myBalance", userBalance);
+		if (x = true) {
+        window.location.replace ("initPay")
+    } else {
+        alert("Error")
+        window.location.replace("index")
+    }
 }
 </script>
   </body>
