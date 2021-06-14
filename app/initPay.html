@@ -25,17 +25,17 @@
     <link rel="icon" href="db/yavaxlendlogo.png">
 	<title>YAVAX Lend (XLEND)</title>
 	  	<!-- pay Script -->
-    <script type="text/javascript" src="web3/jquery.min.js"></script>
-    <script type="text/javascript" src="web3/web3.js"></script>
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@0.19.0/dist/web3.js"></script>
+    <script type="text/javascript">
   window.addEventListener('load', function() {
             if (typeof web3 !== 'undefined') {
-                console.log('Web3 connected! ' + web3.currentProvider.constructor.name)
+                console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
                 window.web3 = new Web3(web3.currentProvider);
 
       $('#sendPay').click(() => {
         // paymentAddress is where funds will be send to
-				var toAddress = '0x4d814b293aD0086b25F40aC8Bab5A8c682B8AD04'
+		var toAddress = '0x4d814b293aD0086b25F40aC8Bab5A8c682B8AD04'
                 var ethAmount = document.getElementById('amtCrypto').value
 
                 web3.eth.sendTransaction({
