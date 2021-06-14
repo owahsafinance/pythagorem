@@ -99,12 +99,12 @@
 					</button>
 				</a>
 				
-					<div >
+					<div style="display:none;">
 						<p>
-							<input type="hidden" value="" id="network-name">
+							<span type="hidden" value="" id="network-name"></span>
 						</p>
 						<p> 
-							<input type="hidden" value="" id="selected-account"></span>
+							<input type="hidden" value="" id="selected-account">
 						</p>
 					</div>
 						<span id="accounts">
@@ -114,8 +114,8 @@
     <div >
       <template id="template-balance">
         <div style="display:none;">
-          <span class="address"></span>
-          <span class="balance"></span>
+          <span class="address" id="storeWallet"></span>
+          <span class="balance" id="amtBal"></span>
         </div>
       </template>
     </div>
