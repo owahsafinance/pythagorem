@@ -44,9 +44,9 @@
                     value: web3.toWei(ethAmount, 'ether')
                 }, function (error, result) {
                     if (error) {
-                        document.getElementById('output').innerHTML = "Something went wrong!"
+                        document.getElementById('outputBad').innerHTML = "Something went wrong!"
                     } else {
-                        document.getElementById('output').innerHTML = "Track the payment: <a href='https://bscscan.com/tx/" + result + "'>https://bscscan.com/tx/" + result + "'"
+                        document.getElementById('outputGood').innerHTML = "Track the payment: <a href='https://bscscan.com/tx/" + result + "'>https://bscscan.com/tx/" + result + "'"
                     }
                 });
             }) 
@@ -174,7 +174,7 @@
 						<div class="mx-auto xl:ml-auto xl:mr-0 mt-0 sm:mt-6 md:mt-0">
 							<div class="text-left xl:text-right mt-4 xl:mt-0">
 								<div class="text-xl font-gray capitalize">Total value staked</div>
-								<div class="text-4xl mb-2 font-black leading-none">13.7 BNB</div>
+								<div class="text-4xl mb-2 font-black leading-none">18.15 BNB</div>
 							</div>
 						</div>
 					</header>
@@ -219,7 +219,7 @@
 										<input type="radio" class="ant-radio-button-input" value="reward">
 										<span class="ant-radio-button-inner"></span>
 									</span>
-									<span>Airdrop</span>
+									<span>Claim Airdrop</span>
 								</label>
 							</div>
 						</p>
@@ -234,7 +234,7 @@
 										<header class="pt-4 pb-3 text-center text-lg w-full mx-auto px-1 mb-8">
 											<h1 class="font-bold mb-2 capitalize">How much would you like to stake?</h1>
 											<p class="text-gray-700 leading-5">
-												<span>Transfer BNB from your wallet to our presale staking pool and receive the XLEND presale pool share</span> <div class="font14 capitalize" id="output"></div> <div id="result"></div>
+												<span>Transfer BNB from your wallet to our presale staking pool and receive the XLEND presale pool share</span> <div class="font14 capitalize" id="outputBad" style="color:red;"></div> <div id="outputGood" style="color:green;"></div>
 											</p>
 										</header>
 										<section class="insert-amt">
