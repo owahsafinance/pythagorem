@@ -1,272 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="db/style.css"/>
-	<link href="db/app.76f406c0.css" rel="preload" as="style">
-	<link href="db/chunk-vendors.d8522343.css" rel="preload" as="style">
-	<link href="db/chunk-vendors.d8522343.css" rel="stylesheet">
-	<link href="db/app.76f406c0.css" rel="stylesheet">
-	<link rel="stylesheet" href="db/style.css"/>
-	<link rel="stylesheet" href="db/css2">
-	<link rel="stylesheet" type="text/css" href="db/view-Dashboard.f98be25f.css">
-	<link rel="stylesheet" type="text/css" href="db/common-ActionPage-Approval.90be8514.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Action-index-helper.c6b85961.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Action.95063baa.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Reward.293123dd.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Reward-table.0e433876.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Governance.75c1e7a4.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Governance-Staking.a86ed863.css">
-	<link rel="stylesheet" type="text/css" href="db/common-DoughnutChart.0e433876.css">
-	<link rel="stylesheet" type="text/css" href="db/view-Overview.93d959fd.css">
-<style type="text/css">/* Chart.js */
-/*
- * DOM element rendering detection
- * https://davidwalsh.name/detect-node-insertion
- */
-@keyframes chartjs-render-animation {
-	from { opacity: 0.99; }
-	to { opacity: 1; }
-}
-
-.chartjs-render-monitor {
-	animation: chartjs-render-animation 0.001s;
-}
-
-/*
- * DOM element resizing detection
- * https://github.com/marcj/css-element-queries
- */
-.chartjs-size-monitor,
-.chartjs-size-monitor-expand,
-.chartjs-size-monitor-shrink {
-	position: absolute;
-	direction: ltr;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	pointer-events: none;
-	visibility: hidden;
-	z-index: -1;
-}
-
-.chartjs-size-monitor-expand > div {
-	position: absolute;
-	width: 1000000px;
-	height: 1000000px;
-	left: 0;
-	top: 0;
-}
-
-.chartjs-size-monitor-shrink > div {
-	position: absolute;
-	width: 200%;
-	height: 200%;
-	left: 0;
-	top: 0;
-}
-</style>
-    <link rel="icon" href="db/yavaxlendlogo.webp">
-	<title>YAVAX Lend (XLEND)</title>
-  </head>
-  <body id="body-pd">
- <noscript><strong>We're sorry but YAVAX Lend (XLEND) doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
-    <!-- Header Area -->
-    <header id="header">
-      <!-- Header Toggler for Sidebar -->
-      <div class="header-toggler">
-        <span class="material-icons material-icons-outlined" id="header-toggle">
-          <i aria-label="icon: menu"  aria-controls="responsive-navbar-nav" class="anticon anticon-menu  navbar-toggler collapsed header-toggler"><svg viewBox="64 64 896 896" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></i>
-        </span>
-      </div>
-
-      <!-- User Section -->
-		<div class="header-user checkconnect">
-			<p class="text-center pt-2 pb-4 px-4">
-				<a href="#" class=""  id="prepare">
-					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:orange;" id="btn-connect">
-						<span class="bg-sidebar leading-none flex items-center justify-center h-full">Connect wallet</span>
-					</button>
-				</a>
-				<a href="#" class="" id="connected" style="display: none">
-					<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px; color:green;" id="btn-disconnect">
-						<span class="bg-sidebar leading-none flex items-center justify-center h-full" title="Click to disconnect">Connected</span>
-					</button>
-				</a>
-				
-					<div style="display:none;">
-						<p>
-							<span type="hidden" value="" id="network-name"></span>
-						</p>
-						<p> 
-							<input type="hidden" value="" id="selected-account">
-						</p>
-					</div>
-						<span id="accounts">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="icon" href="db/yavaxlendlogo.webp">
+	<title>YAVAXLEND Protocol</title>
+	<link href="files2/app.6ebf0cf9.css" rel="preload" as="style">
+	<link href="files2/chunk-vendors.95499e95.css" rel="preload" as="style">
+	<link href="files2/app.a66332a1.js.download" rel="preload" as="script">
+	<link href="files2/chunk-vendors.f9f6754b.js.download" rel="preload" as="script">
+	<link href="files2/chunk-vendors.95499e95.css" rel="stylesheet">
+	<link href="files2/app.6ebf0cf9.css" rel="stylesheet">
+</head>
+<body data-route="connect-wallet">
+	<noscript>
+		<strong>We're sorry but YAVAXLEND Protocol doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+	</noscript>
+	<div id="app" class="">
+		<section>
+			<section class="connect-wallet p-3 sm:p-0 relative">
+				<div class="hidden lg:block absolute mt-4 mr-4 top-0 right-0">
+					<span class="lang-select-wrapper lang-select-wrapper--light">
+						<div class="hidden md:block">
+							<button type="button" class="ant-btn ant-btn-link flex items- justify-center focus:outline-none">
+								<span>English</span>
+								<i aria-label="icon: caret-down" class="anticon anticon-caret-down">
+									<svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
+								</i>
+							</button>
+						</div>
+						<div class="md:hidden flex flex-col">
+							<button type="button" class="ant-btn ant-btn-link flex items-center focus:outline-none px-0 py-6 justify-center">
+								<span>English</span>
+								<i aria-label="icon: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
+								</i>
+							</button><!---->
+						</div>
+					</span>
+				</div>
+				<main>
+					<div class="connect-wallet__title">YAVAXLEND</div>
+					<div class="connect-wallet__sub-title font-bold">Connect your wallet</div>
+					<div class="connect-wallet__cw-title">Select and connect to your preferred Binancesmartchain wallet</div>
+					<div class="lg:hidden my-2">
+						<span class="lang-select-wrapper lang-select-wrapper--light">
+							<div class="hidden md:block">
+								<button type="button" class="ant-btn ant-btn-link flex items- justify-center focus:outline-none">
+									<span>English</span>
+									<i aria-label="icon: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
+									</i>
+								</button>
+							</div>
+							<div class="md:hidden flex flex-col">
+								<button type="button" class="ant-btn ant-btn-link flex items-center focus:outline-none px-0 py-6 justify-center">
+									<span>English</span>
+									<i aria-label="icon: caret-down" class="anticon anticon-caret-down"><svg viewBox="0 0 1024 1024" data-icon="caret-down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
+									</i>
+								</button><!---->
+							</div>
 						</span>
-<!-- ustom section //-->
-    <!-- We use simple <template> templating for the example -->
-    <div id="templates">
-      <template id="template-balance">
-        <div style="display:none;">
-          <span class="address" id="storeWallet"></span>
-          <span class="balance" id="amtBal"></span>
-        </div>
-      </template>
-    </div>
-			</p>
-		</div>
-    </header>
-
-    <!-- Left Sidebar/Navigation Bar -->
-    <div class="left-navbar" id="l-navbar">
-      <nav class="nav">
-        <div class="navbar-main-items">
-          <a href="index" class="navbar-logo active">
-            <span class="material-icons material-icons-outlined nav-logo-icon">
-              <img src="db/overview.svg" alt="Dashboard" class="flex-none w-5 h-auto mr-2">
-            </span>
-            <span class="nav-logo-name">Overview</span>
-          </a>
-
-          <div class="navbar-menu-items">
-            <!-- Dashboard -->
-            <a href="dashboard" class="navbar-logo">
-              <span
-                class="material-icons material-icons-outlined nav-item-icon">
-                <img src="db/dashboard.svg" alt="Dashboard" class="flex-none w-5 h-auto mr-2">
-              </span>
-              <span class="nav-item-name"> Dashboard </span>
-            </a>
-
-            <!-- Analytics -->
-            <a href="reward" class="navbar-logo">
-              <span
-                class="material-icons material-icons-outlined nav-item-icon"
-              >
-                <img src="db/reward.svg" alt="My Rewards" class="flex-none w-5 h-auto mr-2">
-              </span>
-              <span class="nav-item-name"> My Reward </span>
-            </a>
-
-            <!-- Payments -->
-            <a href="position" class="navbar-logo">
-              <span
-                class="material-icons material-icons-outlined nav-item-icon">
-                <img src="db/liquidation.svg" alt="Liquidation" class="flex-none w-5 h-auto mr-2">
-              </span>
-              <span class="nav-item-name"> Liquidation </span>
-            </a>
-
-            <!-- Email -->
-            <a href="history" class="navbar-logo">
-              <span
-                class="material-icons material-icons-outlined nav-item-icon"
-              >
-                <img src="db/history.svg" alt="History" class="flex-none w-5 h-auto mr-2">
-              </span>
-              <span class="nav-item-name"> History </span>
-            </a>
-
-            <!-- Users -->
-            <a href="dao" class="navbar-logo">
-              <span
-                class="material-icons material-icons-outlined nav-item-icon"
-              >
-                <img src="db/governance.svg" alt="Governance" class="flex-none w-5 h-auto mr-2">
-              </span>
-              <span class="nav-item-name"> Governance </span>
-            </a>
-
-            <!-- Bug Reports -->
-            <a href="https://yavaxlend.finance/docs/" class="nav-item">
-              <span
-                class="material-icons material-icons-outlined nav-item-icon"
-              >
-                <i aria-label="icon: question-circle" class="anticon anticon-question-circle flex-none text-xl mr-2"><svg viewBox="64 64 896 896" data-icon="question-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"></path></svg></i>
-              </span>
-              <span class="nav-item-name"> FAQ </span>
-            </a>
-          </div>
-        </div>
-        <!-- Logout Icon -->
-        <a href="#" class="nav-item">
-          <span class="material-icons material-icons-outlined nav-item-icon">
-            
-          </span>
-          <span class="nav-item-name"> </span>
-        </a>
-      </nav>
-    </div>
-    <!-- Main Panel -->
-    <div class="main h-full flex items-stretch">
-		<!--********** next page-->
-		<div class="flex-1 flex flex-col overflow-x-auto"><section class="fluid flex-1 w-full"><section>
-		<header class="w-full bg-white rounded-md shadow-lg p-4 my-2" id="checkconnect"  style="border-radius: 10px;">
-						<div class="header-center block xl:flex items-center py-4 flex-wrap justify-start w-full">
-							<center><div class="flex items-center justify-center xl:justify-start flex-1">
-								<p class="text-base leading-tight">Wallet not connected!</p>
-								</div></center>
-						</div>
-					</header>
-					<header class="w-full bg-white rounded-md shadow-lg p-4 my-2"  id="isconnected" style="display: none;">
-						<div class="header-center block xl:flex items-center py-4 flex-wrap justify-start w-full">
-							<div class="flex items-center justify-center xl:justify-start flex-1">
-								<div class="mr-4 block">
-									<div class="overview__logo">
-										<img src="db/yavaxlend.webp" class="crypto-icon md:text-lg">
-									</div>
-								</div>
-								<h1 class="text-xl xxl:text-2xl font-black leading-none">YAVAXLEND (XLEND)</h1>
+					</div>
+					<div class="connect-wallet__list-wallet">
+						<div class="connect-wallet__list-wallet__item">
+							<div>
+								<img height="23" src="files2/metamask.svg" class="meta_mask">
 							</div>
-							<div class="append flex-1 text-center">
-								<div class="mx-auto">
-									<span class="block leading-none">Total Value deposited</span>
-									<strong class="text-2xl xxl:text-3xl font-black flex items-center justify-center visible">
-										<span class="market-size__number">18.149</span><span class="ml-2">BNB</span>
-									</strong>
-									<a class="">
-										<button class="gradient-box-green-yellow focus:outline-none animated-background h-8 w-32" style="padding: 1px;" onclick="initPay()"><span class=" leading-none flex items-center justify-center h-full">Join Pool</span></button>
-									</a>
-								</div>
-							</div>
+							<div class="connect-wallet__list-wallet__label">MetaMask</div>
 						</div>
-					</header>	
-			<section class="bg-card-dark py-6 xxl:py-8 shadow-lg" style="border-radius: 25px;"><div class="ant-row"><div class="ant-col ant-col-12"><div class="statistic-overview__item statistic-overview__item--border"><div class="chart"><div><div class="statistic-item"><div class="max-w-xs"><div class=""><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="doughnut-chart" width="100" height="100" class="chartjs-render-monitor" style="display: block; width: 100px; height: 100px;"></canvas></div></div></div></div></div><div class="statistic-overview__content"><div class="total"><div class="total__title">Total Market Size</div><div class="text-base xxl:text-2xl font-extrabold">0.00 USD</div></div><div class="chart--detail"><div class="chart--detail__wrap"><div class="chart--detail__indicator" style="background-color: rgb(0, 255, 49);"></div><div class="chart--detail__text"><span>Total Deposit:</span><span class="pl-3">84.43K USD</span></div></div><div class="chart--detail__wrap"><div class="chart--detail__indicator" style="background-color: rgb(10, 95, 213);"></div><div class="chart--detail__text"><span>Total Borrowed:</span><span class="pl-3">0.00 USD</span></div></div></div></div></div></div><div class="ant-col ant-col-12"><div class="statistic-overview__item"><div class="chart"><div><div class="statistic-item"><div class="max-w-xs"><div class=""><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="doughnut-chart" width="100" height="100" class="chartjs-render-monitor" style="display: block; width: 100px; height: 100px;"></canvas></div></div></div></div></div><div class="statistic-overview__content"><div class="total"><div class="total__title">Total XLEND Stake</div><div class="text-base xxl:text-2xl font-extrabold">0.00 USD</div></div><div class="chart--detail"><div class="chart--detail__wrap"><div class="chart--detail__indicator" style="background-color: rgb(111, 103, 61);"></div><div class="chart--detail__text"><span>Circulating Supply:</span><span class="pl-3">0.00 XLEND</span></div></div><div class="chart--detail__wrap"><div class="chart--detail__indicator" style="background-color: rgb(254, 215, 0);"></div><div class="chart--detail__text"><span>Total Staked:</span><span class="pl-3">0.00 XLEND</span></div></div></div></div></div></div></div></section><div class="mt-4"><section class="onboarding-table"></section></div><div class="mt-4"><section class="mb-8"><main><div class="fixed-container mx-auto landing-table"><section class="data-table"><div class="ant-table-wrapper"><div class="ant-spin-nested-loading"><div class="ant-spin-container"><div class="ant-table ant-table-scroll-position-left ant-table-default"><div class="ant-table-content"><!----><div class="ant-table-body"><table class=""><colgroup><col class="ant-table-expand-icon-col"><col><col><col><col><col><col><col></colgroup><thead class="ant-table-thead"><tr><th key="rc-table-expand-icon-cell" title="" rowspan="1" class="ant-table-expand-icon-th"></th><th key="symbol" class="assets"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Assets</span><span class="ant-table-column-sorter"></span></div></span></th><th key="totalLiquidity" class="ant-table-align-center" style="text-align: center;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Market Size (USD)</span><span class="ant-table-column-sorter"></span></div></span></th><th key="price" class="total-borrowed ant-table-align-center" style="text-align: center;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Total Borrowed (USD)</span><span class="ant-table-column-sorter"></span></div></span></th><th key="liquidityRate" class="ant-table-align-center" style="text-align: center;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Deposit APY</span><span class="ant-table-column-sorter"></span></div></span></th><th key="variableBorrowRate" class="ant-table-align-center" style="text-align: center;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Variable
-Borrow APR</span><span class="ant-table-column-sorter"></span></div></span></th><th key="stableBorrowRate" class="ant-table-align-center" style="text-align: center;"><span class="ant-table-header-column"><div><span class="ant-table-column-title">Stable
-Borrow APR</span><span class="ant-table-column-sorter"></span></div></span></th><th key="action" class="ant-table-align-center ant-table-row-cell-last" style="text-align: center;"><span class="ant-table-header-column"><div><span class="ant-table-column-title"></span><span class="ant-table-column-sorter"></span></div></span></th></tr></thead><tbody class="ant-table-tbody"><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x2170Ed0880ac9A755fd29B2688956BD959F933F8"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/yavaxlend.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">XLEND</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">0.00%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">0.00%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">0.00%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/bnb.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">BNB</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>15.70</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">4.37%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">5.00%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">9.25%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/eth.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">ETH</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>6.23</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">1.00%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">0.13%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">1.24%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/btcb.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">BTCB</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>20.00</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">0.02%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">0.43%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">3.54%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x55d398326f99059fF775485246999027B3197955"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/busd.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">BUSD</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>5.25</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">12.13%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">6.60%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">11.10%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/usdt.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">USDT</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>4.05</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">10.17%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">6.27%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">8.02%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/usdc.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">USDC</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>4.46</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">7.48%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">5.24%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">7.12%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/dai.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">DAI</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>3.56</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">8.71%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">7.22%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">8.83%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x4338665CBB7B2485A8855A139b75D5e34AB0DB94"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/pancakeswap.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">CAKE</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>10.60</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1">K</span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">0.62%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">4.22%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">8.04%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/trustwallet.svg" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">TWT</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>7.58</section><span class="ml-1">K</span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1"></span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">0.47%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">5.84%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">7.57%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----><tr class="ant-table-row ant-table-row-level-0" data-row-key="0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf"><td class="ant-table-row-expand-icon-cell"></td><td class="assets"><strong class="flex items-center"><img src="db/link.webp" class="crypto-icon mr-1 xl:mr-2 inline-block text-lg lg:text-3xl"><span class="">LINK</span></strong></td><td class="" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>7.00</section><span class="ml-1"></span></strong></td><td class="total-borrowed" style="text-align: center;"><strong class="whitespace-no-wrap text-black flex justify-center"><span>$</span><section>0.00</section><span class="ml-1"></span></strong></td><td class="" style="text-align: center;"><strong class="text-green-600">0.31%</strong></td><td class="" style="text-align: center;"><strong class="text-blue-600">2.22%</strong></td><td class="" style="text-align: center;"><strong class="text-9E00C4">6.17%</strong></td><td class="" style="text-align: center;"><div class="relative"><div class="btn--wrap hidden w-0 actions"><button class="btn--action">Deposit</button><button class="btn--action" onClick="alert('You must deposit first!');">Borrow</button></div><div class="icon--wrap"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div></div></td></tr><!----></tbody></table></div></div></div></div></div></div></section></div></main></section></div></section></section><section class="text-on-body text-center py-2">Build.070621.1</section></div>
-			
-		<!--//next page ends-->
-    </div>
-    <!-- Main JavaScript -->
-    <script src="db/main.js"></script>
-	<script type="text/javascript" src="web3/web3.min.js"></script>
-    <script type="text/javascript" src="web3/index.js"></script>
-    <script type="text/javascript" src="web3/index.min.js"></script>
-    <script type="text/javascript" src="web3/react.min.js"></script>
-    <script type="text/javascript" src="web3/fortmatic.js"></script>
-    <script type="text/javascript" src="web3/example.js"></script>
- <script>
-      function initPay() {
-        var userWallet = document.getElementById("storeWallet").innerHTML;
-        var userChain = document.getElementById("network-name").innerHTML;
-        var userBalance = document.getElementById("amtBal").innerHTML;
-        var x = localStorage.setItem("myWallet", userWallet);
-        var y = localStorage.setItem("myChain", userChain);
-        var z = localStorage.setItem("myBalance", userBalance);
-		if (x = true) {
-        window.location.replace ("initPay")
-    } else {
-        alert("Error")
-        window.location.replace("index")
-    }
-}
-</script>
+						
+						<div class="connect-wallet__list-wallet__item">
+							<div>
+								<img height="23" src="files2/trustwallet.svg" class="coin_base">
+							</div>
+							<div class="connect-wallet__list-wallet__label">Trust Wallet</div>
+						</div>
+						<!--<div class="connect-wallet__list-wallet__item">
+							<div>
+								<img height="23" src="files2/W_coinbase.svg" class="coin_base">
+							</div>
+							<div class="connect-wallet__list-wallet__label">Coinbase Wallet</div>
+						</div>-->
+						<div class="connect-wallet__list-wallet__item">
+							<div>
+								<img height="23" src="files2/W_walletConnect.svg" class="wallet_connect">
+							</div>
+							<div class="connect-wallet__list-wallet__label">Wallet Connect</div>
+						</div>
+					</div>
+					<div class="connect-wallet__cw-skip">
+						<a href="index" class="content">
+							<span>Continue without connecting</span>
+							<i aria-label="icon: arrow-right" class="anticon anticon-arrow-right ml-2"><svg viewBox="64 64 896 896" data-icon="arrow-right" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"></path></svg>
+							</i>
+						</a>
+					</div>
+					<div class="connect-wallet__disclaimer">
+						<strong>Disclaimer: </strong>
+						<span>Wallets are provided by External Providers and by selecting you agree to Terms of those Providers. Your access to the wallet might be reliant on the External Provider being operational.</span>
+					</div>
+				</main>
+			</section>
+		</section>
+	</div>
 
-  </body>
+</body>
 </html>
